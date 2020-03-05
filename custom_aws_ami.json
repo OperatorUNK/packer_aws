@@ -4,14 +4,15 @@
 		"aws_secret_key": ""
 	},
 	"builders": [{
+		"ami_description": "An AMI with python3, based on Ubuntu.",
 		"type": "amazon-ebs",
 		"access_key": "{{user `aws_access_key`}}",
 		"secret_key": "{{user `aws_secret_key`}}",
 		"region": "eu-west-2",
-		"source_ami": "ami-fce3c696",
+		"source_ami": "ami-006a0174c6c25ac06",
 		"instance_type": "t2.micro",
 		"ssh_username": "ubuntu",
-		"ami_name": "iBOS-AMI-{{timestamp}}"
+		"ami_name": "iBOS-AMI-DEV01-{{timestamp}}"
 	}],
 	"provisioners": [{
 		"type": "shell",
